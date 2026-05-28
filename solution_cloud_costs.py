@@ -1,0 +1,1 @@
+print("Solution for Cloud Costs: Automated optimization tool.")
