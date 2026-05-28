@@ -1,0 +1,17 @@
+# Ignore log files and databases
+*.log
+*.db
+*.tmp
+*.bin
+*.ann
+*.tar.gz
+*.zip
+*.apk
+*.idsig
+
+# Ignore system files and folders
+.DS_Store
+__pycache__/
+node_modules/
+.cache/
+.config/
