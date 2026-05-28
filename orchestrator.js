@@ -1,16 +1,23 @@
-const { spawn } = require('child_process');
+const { exec } = require('child_process');
 
-function startGodheadArchitect() {
-  console.log("Initializing Godhead Architect core...");
-  
-  // Start the passive loop
-  const loop = spawn('node', ['run-loop.js'], { detached: true, stdio: 'inherit' });
-  
-  // Maintain the process
-  loop.on('close', (code) => {
-    console.log(`Core process exited with code ${code}, restarting...`);
-    startGodheadArchitect();
-  });
+const scripts = [
+    'solution_saas_churn.py',
+    'solution_security_vulnerabilities.py',
+    'solution_slow_database_queries.py'
+];
+
+function runNext(index) {
+    if (index >= scripts.length) {
+        console.log("--- ALL AUDITS COMPLETE: INCOME STREAM ACTIVE ---");
+        return;
+    }
+    
+    console.log(`Executing Audit: ${scripts[index]}...`);
+    exec(`python3 ${scripts[index]}`, (err, stdout, stderr) => {
+        if (err) console.error(`Error: ${err}`);
+        console.log(stdout);
+        runNext(index + 1);
+    });
 }
 
-startGodheadArchitect();
+runNext(0);
