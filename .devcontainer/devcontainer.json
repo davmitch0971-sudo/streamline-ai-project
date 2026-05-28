@@ -1,0 +1,4 @@
+{
+  "name": "Godhead Architect Auto-Sync",
+  "postCreateCommand": "git pull https://github.com/davmitch0971-sudo/streamline-ai-project.git main"
+}
