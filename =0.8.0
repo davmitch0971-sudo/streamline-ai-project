@@ -1,0 +1,7 @@
+Collecting crewai==1.9.3
+  Using cached crewai-1.9.3-py3-none-any.whl.metadata (36 kB)
+Requirement already satisfied: tiktoken in ./venv/lib/python3.13/site-packages (0.13.0)
+Downloading crewai-1.9.3-py3-none-any.whl (814 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 814.4/814.4 kB 1.1 MB/s  0:00:00
+Installing collected packages: crewai
+Successfully installed crewai-1.9.3
